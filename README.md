@@ -21,13 +21,13 @@ For more details goto the [docs](https://docs.coollabs.io/coolify-v3/installatio
 Installation is automated with the following command:
 
 ```bash
-wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh
+wget -q https://raw.githubusercontent.com/tiero/install-coolify-v3/master/install.sh -O install.sh; sudo bash ./install.sh
 ```
 
 If you would like no questions during installation:
 
 ```bash
-wget -q https://get.coollabs.io/coolify/install.sh -O install.sh; sudo bash ./install.sh -f
+wget -q https://raw.githubusercontent.com/tiero/install-coolify-v3/master/install.sh -O install.sh; sudo bash ./install.sh -f
 ```
 
 --- 
