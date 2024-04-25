@@ -1,4 +1,4 @@
-name: Production Release to ghcr.io
+name: Production Release to tiero ghcr.io
 
 on:
   release:
@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: "coollabsio/coolify"
+  IMAGE_NAME: "tiero/coolify"
 
 jobs:
   amd64:
@@ -99,7 +99,3 @@ jobs:
       - name: Create & publish manifest
         run: |
           docker buildx imagetools create --append ${{ fromJSON(steps.meta.outputs.json).tags[0] }}-aarch64 --tag ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
-      - uses: sarisia/actions-status-discord@v1
-        if: always()
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_PROD_RELEASE_CHANNEL }}
